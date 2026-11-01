@@ -1,0 +1,187 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Навігаційна панель */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a252f;
+    z-index: 1000; /* Закріплює меню поверх усіх елементів при скролі */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* Main */
+.main-content {
+    flex: 1; /* Займає весь вільний простір, відтісняючи footer донизу */
+    max-width: 900px;
+    width: 90%;
+    /* 100px зверху, щоб фіксоване меню не перекривало перший блок */
+    margin: 100px auto 40px auto;
+}
+
+.content-section {
+    background: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    /* Відступ при прокрутці до якоря, щоб заголовок не ховався під шапку */
+    scroll-margin-top: 90px;
+}
+
+.content-section h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+/* Про мене */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #3498db;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Навички */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.skill-card {
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid #3498db;
+}
+
+/* Хобі */
+.hobbies-list {
+    list-style: none;
+    padding: 0;
+}
+.hobbies-list li {
+    clear: both;
+    display: flow-root;
+    margin-bottom: 25px;
+}
+
+.hobby-item {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.hobbies-img {
+    float: left;
+    width: 160px;
+    height: 110px;
+    object-fit: cover;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-item h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.hobby-item p {
+    color: #555555;
+}
+
+/* Посилання */
+#links ul {
+    padding-left: 20px;
+}
+
+#links a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+#links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #1a252f;
+    color: #bdc3c7;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: auto;
+}
